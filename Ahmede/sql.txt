@@ -1,0 +1,38 @@
+SELECT * FROM employees;
+SELECT first_name FROM employees;
+SELECT first_name, last_name, birth_date FROM employees;
+SELECT * from employees where emp_no ='13562';
+SELECT first_name, last_name from employees where emp_no = '13562';
+SELECT * from employees where first_name ='mary' and last_name = 'cooley';
+SELECT first_name, last_name, emp_no from employees where first_name = 'Moss' and last_name = 'Shanbhogue';
+SELECT * from employees order by birth_date DESC ;
+SELECT * from employees order by birth_date asc ;
+SELECT * from employees where birth_date = '19600215';
+SELECT first_name, last_name, gender from employees where gender ='M' and emp_no >= 11500 and emp_no <= 12000;
+SELECT first_name, last_name, gender from employees where gender ='M' and emp_no BETWEEN 11500 and 12000;
+SELECT emp_no, salary from salaries where salary between 75990 and 76000 order by salary DESC;
+SELECT * from salaries;
+
+SELECT * from employees;
+SELECT * from Customer where Company is NOT NULL;
+SELECT DISTINCT (first_name) from employees where 
+first_name like ("M%") ORDER by first_name  LIMIT 10;
+
+SELECT upper (firsr_name) as FirstName, upper(Last_name) as LastName from employees;
+
+SELECT CONCAT(first_name)
+
+
+SELECT * from employees where LENGTH(first_name) =5;
+
+SELECT * from employees where LENGTH  (first_name) =5 or (last_name)=5;
+
+SELECT * from salaries where LENGTH (salary)=6;
+SELECT * from salaries where length (salary)=8;
+
+SELECT first_name from employees
+where instr (first_name, 'XING'); 
+SELECT REPLACE(gender,"M","Male") from employees;
+SELECT REPLACE(replace(gender,"M","Male"),"F","Female")
+as gender from employees;
+
